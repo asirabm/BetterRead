@@ -21,8 +21,7 @@ public class Author {
 	@Column("personal_name")
 	@CassandraType(type = Name.TEXT)
 	private String personalName;
-
-	public String getId() {
+  	public String getId() {
 		return id;
 	}
 

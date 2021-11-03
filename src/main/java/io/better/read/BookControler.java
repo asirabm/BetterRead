@@ -25,7 +25,7 @@ public class BookControler {
 		Optional<Book> op=bookrepo.findById(bookid);
 		
 		if(op.isPresent()) {
-			String coverImageUrl="/images/no-image-available.jpg";
+			String coverImageUrl="/images/noavailable.jpg";
 			model.addAttribute("book",op.get());
 			if(op.get().getCoverIds()!=null & op.get().getCoverIds().size()>0) {
 				coverImageUrl=Cover_PAGE+ op.get().getCoverIds().get(0)+ "-L.jpg";
